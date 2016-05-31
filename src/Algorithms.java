@@ -40,4 +40,11 @@ public class Algorithms {
             System.out.print(array[i]+", ");
         }
     }
+
+    public void InitArray(){
+        generateArray();
+        shuffleArray();
+        System.out.print("\n" + "Below is an unsorted array of integers:" + "\n");
+        returnArray();
+    }
 }
