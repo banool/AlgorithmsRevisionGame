@@ -2,7 +2,6 @@
  * Created by Brad on 1/06/2016.
  */
 
-
 import java.io.*;
 import java.util.*;
 
@@ -10,6 +9,7 @@ public class PlayerManager {
 
     Scanner inputStream = new Scanner(System.in);
     Player p = Player.INSTANCE;
+
 
     public void outputPlayer () {
 
@@ -23,6 +23,7 @@ public class PlayerManager {
             System.out.println("Problem with file output.");
         }
     }
+
 
     public void inputPlayer () {
 
