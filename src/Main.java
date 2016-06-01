@@ -13,18 +13,17 @@ public class Main {
     String algorithm;
 
     public static void main (String[] args) {
-
         Main game = new Main();
-
         game.run();
         while (true) {
             game.menu();
         }
-
     }
 
     public void run () {
+
         pm.inputPlayer();
+
         if (p.getFirstName() == null) {
             System.out.println("\n" + "Welcome to the Algorithms revision game." + "\n");
             System.out.println("First, please enter your name:");
@@ -69,6 +68,11 @@ public class Main {
             case "exit":
                 pm.outputPlayer();
                 System.exit(0);
+                break;
+
+            default:
+                System.out.println("Oops, wrong command. Remember to use a single space between words " +
+                        "(i.e. Selection Sort)" + "\n");
         }
     }
 }
