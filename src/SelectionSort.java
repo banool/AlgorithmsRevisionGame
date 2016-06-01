@@ -40,6 +40,7 @@ public class SelectionSort extends Algorithms {
         for (int i = 0; i < super.array.length; i++) {
             System.out.print(super.array[i] + ", ");
         }
-        System.out.println();
+        System.out.println("\n" + "\n");
     }
+
 }

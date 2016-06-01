@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 public class Main {
     Scanner scanner = new Scanner(System.in);
-    Player p = new Player();
+
     String algorithm;
 
     public void run(){
+        Player p = new Player();
         System.out.println("\n"+"Welcome to the Algorithms revision game." + "\n");
         System.out.println("First, please enter your name:");
         if (scanner.hasNextLine()) {
@@ -21,7 +22,6 @@ public class Main {
 
     public void menu(){
 
-        Algorithms a = new Algorithms();
         SelectionSort s = new SelectionSort();
 
         System.out.println("Which algorithm would you like to revise?");
@@ -29,7 +29,7 @@ public class Main {
             algorithm = scanner.nextLine();
         }
 
-        switch(algorithm){
+        switch(algorithm.toLowerCase()){
 
             case "selection sort":
                 s.selectionSort();
@@ -45,6 +45,9 @@ public class Main {
                 /*Initiates quiz game that randomly retrieves algorithms/questions,
                 and asks user for answers (i.e. "What is the final output of x Algorithm?")*/
                 break;
+
+            case "exit":
+                System.exit(0);
         }
     }
 
@@ -52,6 +55,9 @@ public class Main {
 
         Main game = new Main();
         //game.run();
-        game.menu();
+        while(true){
+            game.menu();
+        }
+
     }
 }
