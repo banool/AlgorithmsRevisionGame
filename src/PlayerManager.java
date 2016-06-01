@@ -7,13 +7,15 @@ import java.util.*;
 
 public class PlayerManager {
 
-    Scanner inputStream = new Scanner(System.in);
+    //Scanner inputStream = new Scanner(System.in);
     Player p = Player.INSTANCE;
+    Scanner inputStream = null;
 
 
     public void outputPlayer () {
 
         PrintWriter outputStream = null;
+
 
         try {
             outputStream = new PrintWriter(new FileOutputStream("src/players.txt"));

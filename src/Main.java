@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
     PlayerManager pm = new PlayerManager();
+
     Player p = Player.INSTANCE;
 
     String algorithm;
@@ -44,31 +45,36 @@ public class Main {
             algorithm = scanner.nextLine();
         }
         System.out.println();
+        Algorithms a = new Algorithms();
 
         switch (algorithm.toLowerCase()) {
 
             case "selection sort":
                 SelectionSort s = new SelectionSort();
-                s.selectionSort();
+                a.initArray();
+                s.selectionSort(a.array);
                 break;
 
             case "insertion sort":
                 InsertionSort i = new InsertionSort();
-                i.insertionSort();
+                a.initArray();
+                i.insertionSort(a.array);
                 break;
+
+            case "merge sort":
+                MergeSort m = new MergeSort();
 
             case "masters theorem":
                 break;
 
             case "play game":
-                /*Initiates quiz game that randomly retrieves algorithms/questions,
-                and asks user for answers (i.e. "What is the final output of x Algorithm?")*/
+                Quiz q = new Quiz();
+                q.playQuiz(5);
                 break;
 
             case "exit":
                 pm.outputPlayer();
                 System.exit(0);
-                break;
 
             default:
                 System.out.println("Oops, wrong command. Remember to use a single space between words " +

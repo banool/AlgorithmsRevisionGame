@@ -7,11 +7,9 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
 public class Algorithms {
 
-    List<Integer> list = new ArrayList<Integer>();
+    List<Integer> list = new ArrayList<Integer>(10);
     List<Integer> list2 = new ArrayList<Integer>();
     Integer[] array;
     Integer[] array2;
@@ -22,6 +20,7 @@ public class Algorithms {
 
     int count = 1;
 
+    //Generates 10 random integers between 1 and 50, and stores them into the ArrayList.
     public void generateArray() {
         Random rand = new Random();
         int rval;
@@ -30,7 +29,7 @@ public class Algorithms {
             list.add(rval);
         }
     }
-
+    //Shuffles the list, and then copies its contents into an Integer array.
     public void shuffleArray(){
         Collections.shuffle(list);
         array = list.toArray(new Integer[list.size()]);
@@ -42,7 +41,8 @@ public class Algorithms {
         }
     }
 
-    public void InitArray(){
+    //Runs the above methods.
+    public void initArray(){
         generateArray();
         shuffleArray();
         System.out.print("\n" + "Below is an unsorted array of integers:" + "\n");

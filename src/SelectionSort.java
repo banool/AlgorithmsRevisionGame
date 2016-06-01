@@ -12,10 +12,10 @@ public class SelectionSort extends Algorithms {
 
     ArrayList<String> iterations = new ArrayList<String>();
 
-    public void selectionSort () {
+    public void selectionSort (Integer[] array) {
 
-        //Initializes array of random integers in Algorithms class, and shuffles their ordering.
-        InitArray();
+        //Resets the iteration count from the Algorithms superclass.
+        count = 1;
 
         //Add initial unsorted array into ArrayList.
         iterations.add(Arrays.toString(array));

@@ -18,10 +18,10 @@ public class InsertionSort extends Algorithms {
     int i;
     int j;
 
-    public void insertionSort () {
+    public void insertionSort (Integer[] array) {
 
-        //Initializes array of random integers in Algorithms class, and shuffles their ordering.
-        InitArray();
+        //Resets the iteration count from the Algorithms superclass.
+        count = 1;
 
         System.out.println("\n\n" + "Below are the iterations of " + name + ":");
 
