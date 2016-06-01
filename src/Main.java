@@ -3,10 +3,8 @@
  */
 
 import java.util.Scanner;
-import java.util.Timer;
 
-
-public class revision {
+public class Main {
     Scanner scanner = new Scanner(System.in);
     Player p = new Player();
     String algorithm;
@@ -26,37 +24,34 @@ public class revision {
         Algorithms a = new Algorithms();
         SelectionSort s = new SelectionSort();
 
-
         System.out.println("Which algorithm would you like to revise?");
         if(scanner.hasNextLine()){
             algorithm = scanner.nextLine();
         }
 
         switch(algorithm){
+
             case "selection sort":
                 s.selectionSort();
-        }
+                break;
 
+            case "insertion sort":
+                break;
+
+            case "masters theorem":
+                break;
+
+            case "play game":
+                /*Initiates quiz game that randomly retrieves algorithms/questions,
+                and asks user for answers (i.e. "What is the final output of x Algorithm?")*/
+                break;
+        }
     }
 
     public static void main (String[] args) {
 
-        revision game = new revision();
-
+        Main game = new Main();
         //game.run();
-
-
         game.menu();
-
-/*
-        System.out.print("\n" + "Below is an unsorted array of integers:" + "\n");
-        a.generateArray();
-        a.shuffleArray();
-        a.returnArray();
-
-
-
-        System.out.println("\n" + "\n" + "This is the output of " + s.name + ":");
-        s.selectionSort(a.array);*/
     }
 }
