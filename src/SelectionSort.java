@@ -9,27 +9,30 @@ public class SelectionSort extends Algorithms {
 
 
     public void selectionSort () {
-        super.InitArray();
-        System.out.println();
-        System.out.println("\n" + "Below are the iterations of " + name + ":");
-        for (int i = 0; i < super.array.length - 1; i++) {
+
+        //Initializes array of random integers in Algorithms class, and shuffles their ordering.
+        InitArray();
+
+        System.out.println("\n\n" + "Below are the iterations of " + name + ":");
+
+        for (int i = 0; i < array.length - 1; i++) {
             int min = i;
 
-            for (int j = i + 1; j < super.array.length; j++) {
-                if (super.array[j] < super.array[min]) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min]) {
                     min = j;
                 }
             }
 
             //Swap i + j
-            int smallerNumber = super.array[min];
-            super.array[min] = super.array[i];
-            super.array[i] = smallerNumber;
+            int smallerNumber = array[min];
+            array[min] = array[i];
+            array[i] = smallerNumber;
 
             //Prints each iteration of SelectionSort
-            for (int y = 0; y < super.array.length; y++) {
-                System.out.print(super.array[y]+", ");
-                if (y == super.array.length - 1) {
+            for (int y = 0; y < array.length; y++) {
+                System.out.print(array[y]+", ");
+                if (y == array.length - 1) {
                     System.out.println();
                 }
             }
@@ -37,10 +40,10 @@ public class SelectionSort extends Algorithms {
 
         System.out.println("\n" + "This is the final sorted output of " + name + ":");
 
-        for (int i = 0; i < super.array.length; i++) {
-            System.out.print(super.array[i] + ", ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ", ");
         }
+
         System.out.println("\n" + "\n");
     }
-
 }

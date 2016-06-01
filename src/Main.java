@@ -5,37 +5,57 @@
 import java.util.Scanner;
 
 public class Main {
+
     Scanner scanner = new Scanner(System.in);
+    PlayerManager pm = new PlayerManager();
+    Player p = Player.INSTANCE;
 
     String algorithm;
 
-    public void run(){
-        Player p = new Player();
-        System.out.println("\n"+"Welcome to the Algorithms revision game." + "\n");
-        System.out.println("First, please enter your name:");
-        if (scanner.hasNextLine()) {
-            p.setFirstName(scanner.nextLine());
+    public static void main (String[] args) {
+
+        Main game = new Main();
+
+        game.run();
+        while (true) {
+            game.menu();
         }
-        System.out.println("\n" + "Hey, "+p.getFirstName()+"! Shall we get started? " +
-                "The question is rhetorical -- of course we will!");
+
     }
 
-    public void menu(){
+    public void run () {
+        pm.inputPlayer();
+        if (p.getFirstName() == null) {
+            System.out.println("\n" + "Welcome to the Algorithms revision game." + "\n");
+            System.out.println("First, please enter your name:");
+            if (scanner.hasNextLine()) {
+                p.setFirstName(scanner.nextLine());
+            }
+            System.out.println("\n" + "Hey, " + p.getFirstName() + "! Shall we get started? " +
+                    "The question is rhetorical -- of course we will!" + "\n");
+        } else if (p.getFirstName() != null) {
+            System.out.println("\n" + "Welcome back, " + p.getFirstName() + ". Let's get started." + "\n\n");
+        }
+    }
 
-        SelectionSort s = new SelectionSort();
+    public void menu () {
 
         System.out.println("Which algorithm would you like to revise?");
-        if(scanner.hasNextLine()){
+        if (scanner.hasNextLine()) {
             algorithm = scanner.nextLine();
         }
+        System.out.println();
 
-        switch(algorithm.toLowerCase()){
+        switch (algorithm.toLowerCase()) {
 
             case "selection sort":
+                SelectionSort s = new SelectionSort();
                 s.selectionSort();
                 break;
 
             case "insertion sort":
+                InsertionSort i = new InsertionSort();
+                i.insertionSort();
                 break;
 
             case "masters theorem":
@@ -47,17 +67,8 @@ public class Main {
                 break;
 
             case "exit":
+                pm.outputPlayer();
                 System.exit(0);
         }
-    }
-
-    public static void main (String[] args) {
-
-        Main game = new Main();
-        //game.run();
-        while(true){
-            game.menu();
-        }
-
     }
 }

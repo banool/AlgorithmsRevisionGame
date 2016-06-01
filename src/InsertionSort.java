@@ -7,7 +7,12 @@ public class InsertionSort extends Algorithms {
     String pseudo = "";
     String complexity = "";
 
-    public void insertionSort(Integer[] array){
+    public void insertionSort(){
+
+        //Initializes array of random integers in Algorithms class, and shuffles their ordering.
+        InitArray();
+
+
 
     }
 }

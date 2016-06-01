@@ -1,15 +1,23 @@
 /**
  * Created by Brad on 31/05/2016.
  */
-public class Player {
+public enum Player {
 
-    public Player(/*String firstName, int correctAnswers*/){
-        /*this.firstName = firstName;
-        this.correctAnswers = correctAnswers;*/
-    }
-
+    INSTANCE;
     private String firstName;
     private int correctAnswers;
+
+
+    public void getInstance(String command) {
+        switch (command) {
+            case "firstName":
+                System.out.print(firstName);
+                break;
+
+            case "correctAnswers":
+                System.out.print(correctAnswers);
+        }
+    }
 
     public String getFirstName () {
         return firstName;
