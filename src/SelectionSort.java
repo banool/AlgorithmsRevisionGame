@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by Brad on 31/05/2016.
  */
@@ -7,11 +10,15 @@ public class SelectionSort extends Algorithms {
     String pseudo = "";
     String complexity = "";
 
+    ArrayList<String> iterations = new ArrayList<String>();
 
     public void selectionSort () {
 
         //Initializes array of random integers in Algorithms class, and shuffles their ordering.
         InitArray();
+
+        //Add initial unsorted array into ArrayList.
+        iterations.add(Arrays.toString(array));
 
         System.out.println("\n\n" + "Below are the iterations of " + name + ":");
 
@@ -29,16 +36,19 @@ public class SelectionSort extends Algorithms {
             array[min] = array[i];
             array[i] = smallerNumber;
 
-            //Prints each iteration of SelectionSort
-            for (int y = 0; y < array.length; y++) {
-                System.out.print(array[y]+", ");
-                if (y == array.length - 1) {
-                    System.out.println();
-                }
-            }
+            //Add each iteration of Selection Sort to the Arraylist.
+            iterations.add(Arrays.toString(array));
         }
 
-        System.out.println("\n" + "This is the final sorted output of " + name + ":");
+        //Print collected contents of ArrayList.
+        for (String s : iterations) {
+            System.out.println(count++ + ". " + s);
+        }
+
+        //Print final sorted output
+        int finalCount = count - 1;
+        System.out.println("\n" + "This is the final sorted output of " + name + ", after " + finalCount
+                + " iterations:");
 
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");

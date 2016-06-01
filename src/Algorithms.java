@@ -20,6 +20,7 @@ public class Algorithms {
     String pseudo;
     String complexity;
 
+    int count = 1;
 
     public void generateArray() {
         Random rand = new Random();

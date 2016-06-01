@@ -72,7 +72,7 @@ public class Main {
 
             default:
                 System.out.println("Oops, wrong command. Remember to use a single space between words " +
-                        "(i.e. Selection Sort)" + "\n");
+                        "(i.e. Selection Sort)." + "\n\n");
         }
     }
 }

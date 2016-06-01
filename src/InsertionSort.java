@@ -15,9 +15,6 @@ public class InsertionSort extends Algorithms {
     preserve insertion order and uniqueness.*/
     LinkedHashSet<String> iterations = new LinkedHashSet<String>();
 
-    //Counting each iteration of the Insertion Sort.
-    int count = 1;
-
     int i;
     int j;
 
@@ -47,7 +44,10 @@ public class InsertionSort extends Algorithms {
         }
 
         //Print final sorted output
-        System.out.println("\n" + "This is the final sorted output of " + name + ":");
+        int finalCount = count - 1;
+        System.out.println("\n" + "This is the final sorted output of " + name + ", after " + finalCount
+                + " iterations:");
+
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");
         }
