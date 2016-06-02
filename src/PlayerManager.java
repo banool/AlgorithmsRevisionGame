@@ -18,7 +18,7 @@ public class PlayerManager {
 
 
         try {
-            outputStream = new PrintWriter(new FileOutputStream("src/players.txt"));
+            outputStream = new PrintWriter(new FileOutputStream("players.txt"));
             outputStream.println(p.getFirstName());
             outputStream.close();
         } catch (IOException e) {
@@ -30,7 +30,7 @@ public class PlayerManager {
     public void inputPlayer () {
 
         //Creates a player file if one does not already exist.
-        File f = new File("src/players.txt");
+        File f = new File("players.txt");
         if (!f.exists()) {
             try {
                 f.createNewFile();

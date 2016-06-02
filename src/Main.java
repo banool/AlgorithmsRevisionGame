@@ -64,7 +64,9 @@ public class Main {
             case "merge sort":
                 MergeSort m = new MergeSort();
 
-            case "masters theorem":
+            case "master theorem":
+                MasterTheorem mt = new MasterTheorem();
+                mt.masterTheorem();
                 break;
 
             case "play game":
