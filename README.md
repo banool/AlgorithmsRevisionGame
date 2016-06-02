@@ -1,8 +1,8 @@
 ## Algorithms Review Game
 
-This is a reference tool to supplement one's study of an introduction to Algorithms. 
+This is a reference tool to supplement the study of an introduction to Algorithms.
 
-A user can declare a sorting algorithm into the menu, and then an array of randomly generated integers will then be sorted by that array. 
+A user can declare a sorting algorithm, and then an array of randomly generated integers will then be sorted by that array.
 
 
 ## Motivation
