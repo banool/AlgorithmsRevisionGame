@@ -4,19 +4,22 @@
 
 import java.util.Random;
 
-public class Quiz {
+public class Quiz extends Algorithms {
 
     private static final int NULL = 0;
 
-    Random rand = new Random();
     Player p = Player.INSTANCE;
 
     String[] algs = new String[]{"Insertion Sort", "Selection Sort"};
 
     int rval;
     int qCount;
+    int maxQ;
+
+
     String randAlg;
     String answer;
+
 
     //Selects a random value stored within the algs array, and stores this value into the randAlg variable.
     public void randomAlgorithm () {
@@ -32,18 +35,23 @@ public class Quiz {
         }
     }
 
-    /*public void checkAnswer () {
-        if (answer.equals(a.count)) {
+    public void checkAnswer (int count) {
+        if (answer.equals(Integer.toString(count))) {
             int i = p.getCorrectAnswers();
-            p.setCorrectAnswers(i++);
+            p.setCorrectAnswers(i + 1);
             System.out.println("Correct!");
         }
         else {
-            System.out.println("Incorrect :(");
+            System.out.println("Incorrect :(, the answer was "+count);
         }
-    }*/
+
+        System.out.print("You have "+p.getCorrectAnswers()+" out of "+maxQ+" correct. \n\n");
+    }
 
     public void playQuiz (int maxQuestions) {
+
+        maxQ = maxQuestions;
+        p.setCorrectAnswers(NULL);
 
         while (qCount < maxQuestions) {
 
@@ -59,17 +67,18 @@ public class Quiz {
                 case "Insertion Sort":
                     iterationQuestion();
                     i.insertionSort(a.array);
-                    //checkAnswer();
+                    checkAnswer(i.finalCount);
                     qCount++;
                     break;
 
                 case "Selection Sort":
                     iterationQuestion();
                     s.selectionSort(a.array);
-                    //checkAnswer();
+                    checkAnswer(s.finalCount);
                     qCount++;
                     break;
             }
+            System.out.println();
         }
     }
 }

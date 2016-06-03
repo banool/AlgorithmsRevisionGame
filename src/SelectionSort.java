@@ -10,6 +10,8 @@ public class SelectionSort extends Algorithms {
     String pseudo = "";
     String complexity = "";
 
+    int finalCount;
+
     ArrayList<String> iterations = new ArrayList<String>();
 
     public void selectionSort (Integer[] array) {
@@ -42,11 +44,12 @@ public class SelectionSort extends Algorithms {
 
         //Print collected contents of ArrayList.
         for (String s : iterations) {
-            System.out.println(count++ + ". " + s);
+            count++;
+            System.out.println(count + ". " + s);
         }
 
         //Print final sorted output
-        int finalCount = count - 1;
+        finalCount = count - 1;
         System.out.println("\n" + "This is the final sorted output of " + name + ", after " + finalCount
                 + " iterations:");
 

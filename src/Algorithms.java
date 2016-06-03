@@ -20,6 +20,8 @@ public class Algorithms {
     String pseudo;
     String complexity;
 
+
+    //Counts the iterations of a sort on an array.
     int count = 1;
 
     public static String superScript(String str) {

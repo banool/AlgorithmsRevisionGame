@@ -17,6 +17,7 @@ public class InsertionSort extends Algorithms {
 
     int i;
     int j;
+    int finalCount;
 
     public void insertionSort (Integer[] array) {
 
@@ -44,7 +45,7 @@ public class InsertionSort extends Algorithms {
         }
 
         //Print final sorted output
-        int finalCount = count - 1;
+        finalCount = count - 1;
         System.out.println("\n" + "This is the final sorted output of " + name + ", after " + finalCount
                 + " iterations:");
 
