@@ -9,9 +9,7 @@ A user can declare a sorting algorithm, and then an array of randomly generated 
 
 I created this project whilst reviewing for my final Algorithms exam. I wanted a tool that could quickly generate random arrays of integers, and then pass them through various sorting algorithms.
 
-As a visual learner, I found it useful to visualize each iteration of the array as the algorithm works through doing its sorting. This feature allows me to quickly remember the characteristics of any given sorting algorithm.
-
-The project exists as a valuable source of reference and an aid towards my studies in algorithms.
+I found it useful to visualize each iteration of the array as the algorithm works through doing its sorting. This feature allows me to quickly remember the characteristics of any given sorting algorithm.
 
 
 Furthermore, I wanted to apply theory I had learned in studying algorithms towards my studies in Java and the OO paradigm.
@@ -38,7 +36,9 @@ Initiates a quiz mode that cycles through a randomly selected algorithm type and
 
 - `master theorem`
 Produces a random equation and solves the recurrence.
+
 - `exit`
+Exits the program, and saves your first name so that it can be recalled the next time you start the program.
 
 
 ## Contributing
