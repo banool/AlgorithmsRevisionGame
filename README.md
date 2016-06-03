@@ -5,7 +5,7 @@ This is a reference tool to supplement the study of an introduction to Algorithm
 A user can declare a sorting algorithm, and then an array of randomly generated integers will then be sorted by that array.
 
 
-## Motivation
+### Motivation
 
 I created this project whilst reviewing for my final Algorithms exam. I wanted a tool that could quickly generate random arrays of integers, and then pass them through various sorting algorithms.
 
@@ -14,7 +14,7 @@ I found it useful to visualize each iteration of the array as the algorithm work
 
 Furthermore, I wanted to apply theory I had learned in studying algorithms towards my studies in Java and the OO paradigm.
 
-## Installation
+### Installation
 
 1. Navigate to the location of the downloaded `src` folder.
 
@@ -22,7 +22,7 @@ Furthermore, I wanted to apply theory I had learned in studying algorithms towar
 
 3. Run the Main.java class: `java Main`.
 
-## Usage
+### Usage
 
 Commands to enter into the main menu:
 
@@ -30,7 +30,7 @@ Commands to enter into the main menu:
 Implements selection sort onto a randomly generated array of integers, displaying each iteration of the array as it is traversed from 0 to n-1.
 
 - `insertion sort`
-Implements insertion sort onto a randomly generated array of integers, displaying each iteration of the array as it is traversed from 0 to n-1.
+Implements insertion sort onto a randomly generated array of integers, displaying each iteration of the array as it is traversed n times.
 - `play game`
 Initiates a quiz mode that cycles through a randomly selected algorithm type and asks the user to guess the amount of iterations required before array is sorted.
 
@@ -41,7 +41,7 @@ Produces a random equation and solves the recurrence.
 Exits the program, and saves your first name so that it can be recalled the next time you start the program.
 
 
-## Contributing
+### Contributing
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
