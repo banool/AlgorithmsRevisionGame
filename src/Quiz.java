@@ -10,16 +10,14 @@ public class Quiz extends Algorithms {
 
     Player p = Player.INSTANCE;
 
-    String[] algs = new String[]{"Insertion Sort", "Selection Sort"};
+    String[] algs = new String[]{"Insertion Sort", "Selection Sort", "Quick Sort"};
 
     int rval;
     int qCount;
     int maxQ;
 
-
     String randAlg;
     String answer;
-
 
     //Selects a random value stored within the algs array, and stores this value into the randAlg variable.
     public void randomAlgorithm () {
@@ -58,6 +56,7 @@ public class Quiz extends Algorithms {
             Algorithms a = new Algorithms();
             InsertionSort i = new InsertionSort();
             SelectionSort s = new SelectionSort();
+            QuickSort qs = new QuickSort();
 
             a.initArray();
             randomAlgorithm();
@@ -75,6 +74,13 @@ public class Quiz extends Algorithms {
                     iterationQuestion();
                     s.selectionSort(a.array);
                     checkAnswer(s.finalCount);
+                    qCount++;
+                    break;
+
+                case "Quick Sort":
+                    iterationQuestion();
+                    qs.quickSort(a.array);
+                    checkAnswer(qs.finalCount);
                     qCount++;
                     break;
             }

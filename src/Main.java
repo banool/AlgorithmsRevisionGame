@@ -61,6 +61,13 @@ public class Main {
                 i.insertionSort(a.array);
                 break;
 
+            case "quick sort":
+            case "quicksort":
+                QuickSort qs = new QuickSort();
+                a.initArray();
+                qs.quickSort(a.array);
+                break;
+
             case "merge sort":
                 MergeSort m = new MergeSort();
 
